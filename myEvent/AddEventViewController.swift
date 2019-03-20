@@ -7,10 +7,7 @@
 //
 
 import UIKit
-
-protocol AddEventViewControllerDelegate {
-    func addEventViewController(_ addEventViewController: AddEventViewController, didAddEvent event: Event)
-}
+import CoreData
 
 class AddEventViewController: UIViewController {
 
@@ -21,16 +18,27 @@ class AddEventViewController: UIViewController {
         let firstName = firstNameTextField.text ?? ""
         let lastName = lastNameTextField.text ?? ""
         let birthdate = birthdatePicker.date
-        let newBirthday = Event(firstName: firstName, lastName: lastName, birthdate: birthdate)
-        delegate?.addEventViewController(self, didAddEvent: newBirthday)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let newBirthday = Event(context: context)
+        newBirthday.firstName = firstName
+        newBirthday.lastName = lastName
+        newBirthday.birthdate = birthdate
+        newBirthday.birthdayId = UUID().uuidString
+        if let uniqueId = newBirthday.birthdayId {
+            print("birthdayId: \(uniqueId)")
+        }
+        do{
+            try context.save()
+        } catch let error {
+            print("Не удалось сохранить из-за ошибки \(error).")
+        }
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
-    
-    var delegate: AddEventViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

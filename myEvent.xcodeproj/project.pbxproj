@@ -13,7 +13,6 @@
 		5524C37F223EC54300198011 /* myEvent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5524C37D223EC54300198011 /* myEvent.xcdatamodeld */; };
 		5524C381223EC54500198011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5524C380223EC54500198011 /* Assets.xcassets */; };
 		5524C384223EC54500198011 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5524C382223EC54500198011 /* LaunchScreen.storyboard */; };
-		5524C38C223ED03400198011 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5524C38B223ED03400198011 /* Event.swift */; };
 		5524C38E223EDB3200198011 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5524C38D223EDB3200198011 /* EventTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +25,6 @@
 		5524C380223EC54500198011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5524C383223EC54500198011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5524C385223EC54500198011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5524C38B223ED03400198011 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		5524C38D223EDB3200198011 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +62,6 @@
 				5524C378223EC54300198011 /* AddEventViewController.swift */,
 				5524C37A223EC54300198011 /* Main.storyboard */,
 				5524C38D223EDB3200198011 /* EventTableViewController.swift */,
-				5524C38B223ED03400198011 /* Event.swift */,
 				5524C380223EC54500198011 /* Assets.xcassets */,
 				5524C382223EC54500198011 /* LaunchScreen.storyboard */,
 				5524C385223EC54500198011 /* Info.plist */,
@@ -144,7 +141,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5524C38C223ED03400198011 /* Event.swift in Sources */,
 				5524C37F223EC54300198011 /* myEvent.xcdatamodeld in Sources */,
 				5524C379223EC54300198011 /* AddEventViewController.swift in Sources */,
 				5524C377223EC54300198011 /* AppDelegate.swift in Sources */,
